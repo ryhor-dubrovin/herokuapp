@@ -27,11 +27,11 @@ public class TablesTest extends BaseTest{
     public void secondTableDataTest() {
         driver.get(TABLES_PAGE);
         String emailXpath = "//table[2]//td[text() = 'fbach@yahoo.com']";
-        String dueNameXpath = emailXpath + "/following-sibling::td[1]";
-        String webSiteNameXpath = emailXpath + "/following-sibling::td[2]";
+        String dueXpath = emailXpath + "/following-sibling::td[1]";
+        String webSiteXpath = emailXpath + "/following-sibling::td[2]";
 
-        WebElement due = driver.findElement(By.xpath(dueNameXpath));
-        WebElement webSite = driver.findElement(By.xpath(webSiteNameXpath));
+        WebElement due = driver.findElement(By.xpath(dueXpath));
+        WebElement webSite = driver.findElement(By.xpath(webSiteXpath));
 
         Assert.assertEquals(due.getText(),"$51.00","Wrong due");
         Assert.assertEquals(webSite.getText(),"http://www.frank.com","Wrong Web Site");
