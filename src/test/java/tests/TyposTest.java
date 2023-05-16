@@ -10,7 +10,7 @@ import java.io.IOException;
 import static constants.Urls.INPUTS_PAGE;
 import static constants.Urls.TYPOS_PAGE;
 
-public class TyposTest extends BaseTest{
+public class TyposTest extends BaseTest {
 
     @Test
     public void testSpellCheck() {
@@ -22,6 +22,6 @@ public class TyposTest extends BaseTest{
                 "This example demonstrates a typo being introduced. It does it randomly on each page load.\n" +
                 "Sometimes you'll see a typo, other times you won't.";
 
-        Assert.assertEquals(pageText,goodText,"Text has a typo");
+        Assert.assertEquals(pageText, goodText, "Text has a typo");
     }
 }

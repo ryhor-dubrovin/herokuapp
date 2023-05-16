@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
+
 import static constants.Urls.*;
 
 public class CheckboxesTest extends BaseTest {

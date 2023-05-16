@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static constants.Urls.NOTIFICATIONS_PAGE;
 
-public class NotificationMessagesTest extends BaseTest{
+public class NotificationMessagesTest extends BaseTest {
 
     @Test
     public void linkSuccessfulClickTest() {
@@ -15,8 +15,8 @@ public class NotificationMessagesTest extends BaseTest{
         driver.findElement(By.linkText("Click here")).click();
 
         WebElement notification = driver.findElement(By.id("flash"));
-        Assert.assertTrue(notification.isDisplayed(),"Notification isn't displayed");
+        Assert.assertTrue(notification.isDisplayed(), "Notification isn't displayed");
         String notificationText = notification.getText();
-        Assert.assertTrue(notificationText.contains("Action successful"),"Incorrect notification message");
+        Assert.assertTrue(notificationText.contains("Action successful"), "Incorrect notification message");
     }
 }

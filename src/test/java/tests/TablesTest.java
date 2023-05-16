@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static constants.Urls.TABLES_PAGE;
 
-public class TablesTest extends BaseTest{
+public class TablesTest extends BaseTest {
 
     @Test
     public void firstTableDataTest() {
@@ -15,12 +15,11 @@ public class TablesTest extends BaseTest{
         String emailXpath = "//table[1]//td[text() = 'fbach@yahoo.com']";
         String firstNameXpath = emailXpath + "/preceding-sibling::td[1]";
         String lastNameXpath = emailXpath + "/preceding-sibling::td[2]";
-        //WebElement email = driver.findElement(By.xpath(emailXpath));
         WebElement firstName = driver.findElement(By.xpath(firstNameXpath));
         WebElement lastName = driver.findElement(By.xpath(lastNameXpath));
 
-        Assert.assertEquals(firstName.getText(),"Frank","Wrong first name");
-        Assert.assertEquals(lastName.getText(),"Bach","Wrong last name");
+        Assert.assertEquals(firstName.getText(), "Frank", "Wrong first name");
+        Assert.assertEquals(lastName.getText(), "Bach", "Wrong last name");
     }
 
     @Test
@@ -33,7 +32,7 @@ public class TablesTest extends BaseTest{
         WebElement due = driver.findElement(By.xpath(dueXpath));
         WebElement webSite = driver.findElement(By.xpath(webSiteXpath));
 
-        Assert.assertEquals(due.getText(),"$51.00","Wrong due");
-        Assert.assertEquals(webSite.getText(),"http://www.frank.com","Wrong Web Site");
+        Assert.assertEquals(due.getText(), "$51.00", "Wrong due");
+        Assert.assertEquals(webSite.getText(), "http://www.frank.com", "Wrong Web Site");
     }
 }

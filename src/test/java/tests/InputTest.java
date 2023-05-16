@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static constants.Urls.*;
 
-public class InputTest extends BaseTest{
+public class InputTest extends BaseTest {
 
     @Test
     public void couldEnterValuesWithArrowsTest() {
