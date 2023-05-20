@@ -2,12 +2,16 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import static constants.Urls.NOTIFICATIONS_PAGE;
 
 public class NotificationsPage extends BasePage {
-    private final By CLICK_HERE_LINK = By.linkText("Click here");
-    private final By NOTIFICATION = By.id("flash");
+    @FindBy(linkText = "Click here")
+    private WebElement clickHereLink;
+    @FindBy(id = "flash")
+    private WebElement notification;
 
     public NotificationsPage(WebDriver driver) {
         super(driver);
@@ -18,14 +22,14 @@ public class NotificationsPage extends BasePage {
     }
 
     public void clickClickHereLink() {
-        driver.findElement(CLICK_HERE_LINK).click();
+        clickHereLink.click();
     }
 
     public boolean isNotificationDisplayed() {
-        return driver.findElement(NOTIFICATION).isDisplayed();
+        return notification.isDisplayed();
     }
 
     public String getNotificationText() {
-        return driver.findElement(NOTIFICATION).getText();
+        return notification.getText();
     }
 }
