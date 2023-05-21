@@ -1,10 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 import static constants.Urls.TYPOS_PAGE;
 
@@ -19,8 +17,9 @@ public class TyposPage extends BasePage {
         super(driver);
     }
 
-    public void openTyposPage() {
+    public TyposPage openTyposPage() {
         driver.get(TYPOS_PAGE);
+        return this;
     }
 
     public String getFieldText() {
