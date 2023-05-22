@@ -8,13 +8,13 @@ import static constants.Urls.TABLES_PAGE;
 
 public class TablesPage extends BasePage {
     @FindBy(xpath = "//table[1]//td[text() = 'fbach@yahoo.com']/preceding-sibling::td[1]")
-    WebElement firstName1stTbl;
+    private WebElement firstName1stTbl;
     @FindBy(xpath = "//table[1]//td[text() = 'fbach@yahoo.com']/preceding-sibling::td[2]")
-    WebElement lastName1stTbl;
+    private WebElement lastName1stTbl;
     @FindBy(xpath = "//table[2]//td[text() = 'fbach@yahoo.com']/following-sibling::td[1]")
-    WebElement due2ndTbl;
+    private WebElement due2ndTbl;
     @FindBy(xpath = "//table[2]//td[text() = 'fbach@yahoo.com']/following-sibling::td[2]")
-    WebElement webSite2ndTbl;
+    private WebElement webSite2ndTbl;
 
     public TablesPage(WebDriver driver) {
         super(driver);
