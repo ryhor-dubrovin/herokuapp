@@ -8,10 +8,10 @@ import static constants.Urls.TABLES_PAGE;
 
 public class TablesPage extends BasePage {
     private String emailXpath = new String();
-    public By FIRST_NAME;
-    public By LAST_NAME;
-    public By DUE;
-    public By WEB_SITE;
+    private By FIRST_NAME;
+    private By LAST_NAME;
+    private By DUE;
+    private By WEB_SITE;
 
     public TablesPage(WebDriver driver) {
         super(driver);
