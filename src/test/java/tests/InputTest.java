@@ -1,14 +1,8 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.CheckboxesPage;
 import pages.InputPage;
-
-import static constants.Urls.*;
 
 public class InputTest extends BaseTest {
 

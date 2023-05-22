@@ -1,7 +1,5 @@
 package pages;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,16 +17,19 @@ public class CheckboxesPage extends BasePage {
         super(driver);
     }
 
-    public void openCheckboxesPage() {
+    public CheckboxesPage openCheckboxesPage() {
         driver.get(CHECKBOXES_PAGE);
+        return this;
     }
 
-    public void clickFirstCheckbox() {
+    public CheckboxesPage clickFirstCheckbox() {
         firstCheckbox.click();
+        return this;
     }
 
-    public void clickSecondCheckbox() {
+    public CheckboxesPage clickSecondCheckbox() {
         secondCheckbox.click();
+        return this;
     }
 
     public boolean isFirstCheckboxSelected() {
