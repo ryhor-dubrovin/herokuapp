@@ -10,7 +10,6 @@ public class DragAndDropTest extends BaseTest {
         DragAndDropPage dragAndDropPage = new DragAndDropPage(driver);
         dragAndDropPage.openDragAndDropPage();
         dragAndDropPage.dragAndDrop();
-        System.out.println(dragAndDropPage.getDroppableMessage());
         Assert.assertEquals(dragAndDropPage.getDroppableMessage(),
                 dragAndDropPage.getSuccessMessage(),
                 "Element not dropped");

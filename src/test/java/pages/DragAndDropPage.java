@@ -16,24 +16,26 @@ public class DragAndDropPage extends BasePage {
     @FindBy(id = "droppable")
     private WebElement droppable;
     private final String successMessage = "Dropped!";
+
     public String getSuccessMessage() {
-        return getSuccessMessage();
+        return successMessage;
     }
+
     public String getDroppableMessage() {
-        driver.switchTo().frame(frame);
-        return driver.findElement(By.xpath("//*[@id='droppable']/p")).getText();
-        //return droppable.getText();
+        return droppable.getText();
     }
 
     public DragAndDropPage(WebDriver driver) {
         super(driver);
     }
+
     public void openDragAndDropPage() {
         driver.get(DRAG_AND_DROP_PAGE);
     }
+
     public void dragAndDrop() {
         driver.switchTo().frame(frame);
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(draggable,droppable).build().perform();
+        actions.dragAndDrop(draggable, droppable).build().perform();
     }
 }

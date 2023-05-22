@@ -12,6 +12,7 @@ public class DropdownPage extends BasePage {
     private WebElement dropdownList;
     private final String optionOneText = "Option 1";
     private final String optionTwoText = "Option 2";
+
     public DropdownPage(WebDriver driver) {
         super(driver);
     }
@@ -27,6 +28,7 @@ public class DropdownPage extends BasePage {
     public void openDropdownPage() {
         driver.get(DROPDOWN_PAGE);
     }
+
     public String selectOptionOne() {
         Select select = new Select(dropdownList);
         select.selectByValue("1");

@@ -18,9 +18,11 @@ public class FileUploadPage extends BasePage {
     public FileUploadPage(WebDriver driver) {
         super(driver);
     }
+
     public String getUploadFileName() {
         return uploadFileName.getText();
     }
+
     public String getFileName() {
         return fileName;
     }
@@ -35,6 +37,7 @@ public class FileUploadPage extends BasePage {
                 .concat("/src/main/resources/files/Screenshot1.png"));
         return this;
     }
+
     public FileUploadPage clickUploadButton() {
         uploadButton.click();
         return this;

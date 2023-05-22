@@ -11,6 +11,7 @@ public class AlertsTest extends BaseTest {
         alertsPage.openAlertsPage();
         Assert.assertEquals(alertsPage.acceptFirstAlert(), alertsPage.getFirstAlertText(), "Wrong first alert text");
     }
+
     @Test
     public void secondAlertCancelTest() {
         AlertsPage alertsPage = new AlertsPage(driver);

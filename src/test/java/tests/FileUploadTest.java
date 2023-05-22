@@ -14,6 +14,6 @@ public class FileUploadTest extends BaseTest {
                 .clickUploadButton()
                 .getUploadFileName();
         String fileName = fileUploadPage.getFileName();
-        Assert.assertEquals(uploadedFileName,fileName,"File don't upload");
+        Assert.assertEquals(uploadedFileName, fileName, "File don't upload");
     }
 }

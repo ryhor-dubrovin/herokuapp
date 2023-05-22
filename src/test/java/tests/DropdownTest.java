@@ -9,12 +9,13 @@ public class DropdownTest extends BaseTest {
     public void selectOptionOneTest() {
         DropdownPage dropdownPage = new DropdownPage(driver);
         dropdownPage.openDropdownPage();
-        Assert.assertEquals(dropdownPage.selectOptionOne(),dropdownPage.getOptionOneText(),"Option 1 not selected");
+        Assert.assertEquals(dropdownPage.selectOptionOne(), dropdownPage.getOptionOneText(), "Option 1 not selected");
     }
+
     @Test
     public void selectOptionTwoTest() {
         DropdownPage dropdownPage = new DropdownPage(driver);
         dropdownPage.openDropdownPage();
-        Assert.assertEquals(dropdownPage.selectOptionTwo(),dropdownPage.getOptionTwoText(),"Option 2 not selected");
+        Assert.assertEquals(dropdownPage.selectOptionTwo(), dropdownPage.getOptionTwoText(), "Option 2 not selected");
     }
 }
