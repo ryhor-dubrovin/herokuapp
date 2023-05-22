@@ -13,6 +13,8 @@ public class AlertsPage extends BasePage {
     private WebElement secondAlert;
     @FindBy(css = "[onclick='jsPrompt()']")
     private WebElement thirdAlert;
+    @FindBy(id = "result")
+    private WebElement inputText;
     public final String FIRST_ALERT_TEXT = "I am a JS Alert";
     public final String SECOND_ALERT_TEXT = "I am a JS Confirm";
     public final String THIRD_ALERT_TEXT = "I am a JS prompt";
@@ -21,19 +23,45 @@ public class AlertsPage extends BasePage {
         super(driver);
     }
 
+    public String getInputText() {
+        return inputText.getText();
+    }
+
     public void openAlertsPage() {
         driver.get(ALERTS_PAGE);
     }
 
-    public void clickFirstAlert() {
+    public void clickFirstAlertButton() {
         firstAlert.click();
     }
 
-    public void clickSecondAlert() {
+    public void clickSecondAlertButton() {
         secondAlert.click();
     }
 
-    public void clickThirdAlert() {
+    public void clickThirdAlertButton() {
         thirdAlert.click();
+    }
+
+    public String acceptFirstAlert() {
+        clickFirstAlertButton();
+        String alertText = driver.switchTo().alert().getText();
+        driver.switchTo().alert().accept();
+        return alertText;
+    }
+
+    public String cancelSecondAlert() {
+        clickSecondAlertButton();
+        String alertText = driver.switchTo().alert().getText();
+        driver.switchTo().alert().dismiss();
+        return alertText;
+    }
+
+    public String sendTextAndAcceptThirdAlert(String text) {
+        clickThirdAlertButton();
+        String alertText = driver.switchTo().alert().getText();
+        driver.switchTo().alert().sendKeys(text);
+        driver.switchTo().alert().accept();
+        return alertText;
     }
 }
