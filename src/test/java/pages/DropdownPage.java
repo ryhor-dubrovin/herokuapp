@@ -9,7 +9,7 @@ public class DropdownPage extends BasePage {
         super(driver);
     }
 
-    public void openCheckboxesPage() {
+    public void openDropdownPage() {
         driver.get(DROPDOWN_PAGE);
     }
 }

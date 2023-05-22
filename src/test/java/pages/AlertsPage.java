@@ -15,9 +15,21 @@ public class AlertsPage extends BasePage {
     private WebElement thirdAlert;
     @FindBy(id = "result")
     private WebElement inputText;
-    public final String FIRST_ALERT_TEXT = "I am a JS Alert";
-    public final String SECOND_ALERT_TEXT = "I am a JS Confirm";
-    public final String THIRD_ALERT_TEXT = "I am a JS prompt";
+    private final String FIRST_ALERT_TEXT = "I am a JS Alert";
+    private final String SECOND_ALERT_TEXT = "I am a JS Confirm";
+    private final String THIRD_ALERT_TEXT = "I am a JS prompt";
+
+    public String getFirstAlertText() {
+        return FIRST_ALERT_TEXT;
+    }
+
+    public String getSecondAlertText() {
+        return SECOND_ALERT_TEXT;
+    }
+
+    public String getThirdAlertText() {
+        return THIRD_ALERT_TEXT;
+    }
 
     public AlertsPage(WebDriver driver) {
         super(driver);
