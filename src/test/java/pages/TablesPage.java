@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import static constants.Urls.TABLES_PAGE;
 
 public class TablesPage extends BasePage {
+
     @FindBy(xpath = "//table[1]//td[text() = 'fbach@yahoo.com']/preceding-sibling::td[1]")
     private WebElement firstName1stTbl;
     @FindBy(xpath = "//table[1]//td[text() = 'fbach@yahoo.com']/preceding-sibling::td[2]")

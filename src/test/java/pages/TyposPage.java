@@ -9,6 +9,7 @@ import org.testng.Assert;
 import static constants.Urls.TYPOS_PAGE;
 
 public class TyposPage extends BasePage {
+
     @FindBy(xpath = "//div[2]")
     private WebElement field;
     public static final String GOOD_TEXT = "Typos\n" +
