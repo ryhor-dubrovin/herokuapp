@@ -5,6 +5,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.CheckboxesPage;
+import pages.InputPage;
 
 import static constants.Urls.*;
 
@@ -12,19 +14,17 @@ public class InputTest extends BaseTest {
 
     @Test
     public void couldEnterValuesWithArrowsTest() {
-        driver.get(INPUTS_PAGE);
-        WebElement field = driver.findElement(By.tagName("input"));
+        InputPage inputPage = new InputPage(driver);
+        inputPage.openInputPage();
 
         for (int i = 0; i < 10; i++) {
-            field.sendKeys(Keys.ARROW_UP);
+            inputPage.fieldArrowUp();
         }
-        String fieldValue = field.getAttribute("value"); // ??
-        Assert.assertEquals(fieldValue, "10", "Incorrect field value after increased");
+        Assert.assertEquals(inputPage.getFieldValue(), "10", "Incorrect field value after increased");
 
         for (int i = 0; i < 5; i++) {
-            field.sendKeys(Keys.ARROW_DOWN);
+            inputPage.fieldArrowDown();
         }
-        fieldValue = field.getAttribute("value"); // ??
-        Assert.assertEquals(fieldValue, "5", "Incorrect field value after decreased");
+        Assert.assertEquals(inputPage.getFieldValue(), "5", "Incorrect field value after decreased");
     }
 }
