@@ -13,6 +13,7 @@ public class FileUploadTest extends BaseTest {
                 .uploadImage()
                 .clickUploadButton()
                 .getUploadFileName();
-        Assert.assertEquals(uploadedFileName,fileUploadPage.getFileName(),"File don't upload");
+        String fileName = fileUploadPage.getFileName();
+        Assert.assertEquals(uploadedFileName,fileName,"File don't upload");
     }
 }
