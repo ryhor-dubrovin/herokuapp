@@ -22,6 +22,7 @@ public class DragAndDropPage extends BasePage {
     }
 
     public String getDroppableMessage() {
+        driver.switchTo().frame(frame);
         return droppable.getText();
     }
 
@@ -37,5 +38,6 @@ public class DragAndDropPage extends BasePage {
         driver.switchTo().frame(frame);
         Actions actions = new Actions(driver);
         actions.dragAndDrop(draggable, droppable).build().perform();
+        driver.switchTo().parentFrame();
     }
 }
