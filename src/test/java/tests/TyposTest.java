@@ -12,6 +12,6 @@ public class TyposTest extends BaseTest {
         String text = typosPage
                 .openTyposPage()
                 .getFieldText();
-        Assert.assertEquals(text, typosPage.GOOD_TEXT, "Text has a typo");
+        Assert.assertEquals(text, typosPage.getGoodText(), "Text has a typo");
     }
 }
