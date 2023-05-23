@@ -7,8 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import static constants.Urls.TYPOS_PAGE;
 
 public class TyposPage extends BasePage {
+
     @FindBy(xpath = "//div[2]")
     private WebElement field;
+
     private final String GOOD_TEXT = "Typos\n" +
             "This example demonstrates a typo being introduced. It does it randomly on each page load.\n" +
             "Sometimes you'll see a typo, other times you won't.";
