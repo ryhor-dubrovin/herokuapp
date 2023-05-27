@@ -25,9 +25,9 @@ public class InputTest extends BaseTest {
     @DataProvider(name = "testData")
     public Object[][] inputValues() {
         return new Object[][]{
-                {5,0, "5"},
-                {0,5, "-5"},
-                {5,3, "2"}
+                {5, 0, "5"},
+                {0, 5, "-5"},
+                {5, 3, "2"}
         };
     }
 }
