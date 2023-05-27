@@ -8,7 +8,7 @@ import pages.InputPage;
 public class InputTest extends BaseTest {
 
     @Test(dataProvider = "testData")
-    public void couldEnterValuesWithArrowsTest(int arrowUp, int arrowDown, String result) {
+    public void changeValueWithArrowsTest(int arrowUp, int arrowDown, String result) {
         InputPage inputPage = new InputPage(driver);
         inputPage.openInputPage();
 
@@ -19,7 +19,7 @@ public class InputTest extends BaseTest {
         for (int i = 0; i < arrowDown + 1; i++) {
             inputPage.fieldArrowDown();
         }
-        Assert.assertEquals(inputPage.getFieldValue(), result, "Incorrect field value after decreased");
+        Assert.assertEquals(inputPage.getFieldValue(), result, "Incorrect field value");
     }
 
     @DataProvider(name = "testData")
