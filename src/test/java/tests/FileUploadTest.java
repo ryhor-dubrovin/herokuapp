@@ -1,11 +1,13 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.FileUploadPage;
 
 public class FileUploadTest extends BaseTest {
-    @Test
+    @Test(description = "Upload image")
+    @Description("Upload image")
     public void uploadImageTest() {
         FileUploadPage fileUploadPage = new FileUploadPage(driver);
         String uploadedFileName = fileUploadPage

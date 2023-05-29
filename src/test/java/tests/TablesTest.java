@@ -1,13 +1,14 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TablesPage;
 
-
 public class TablesTest extends BaseTest {
 
-    @Test
+    @Test(description = "1st table data correctness")
+    @Description("1st table data correctness")
     public void firstTableDataTest() {
         TablesPage tablesPage = new TablesPage(driver);
         tablesPage.openTablesPage();
@@ -15,7 +16,8 @@ public class TablesTest extends BaseTest {
         Assert.assertEquals(tablesPage.getLastName1stTbl(), System.getProperty("lastName"), "Wrong last name");
     }
 
-    @Test
+    @Test(description = "2nd table data correctness")
+    @Description("2nd table data correctness")
     public void secondTableDataTest() {
         TablesPage tablesPage = new TablesPage(driver);
         tablesPage.openTablesPage();

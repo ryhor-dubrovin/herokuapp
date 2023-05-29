@@ -1,25 +1,29 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AlertsPage;
 
 public class AlertsTest extends BaseTest {
-    @Test
+    @Test(description = "Confirm 1st alert")
+    @Description("Confirm 1st alert")
     public void firstAlertConfirmTest() {
         AlertsPage alertsPage = new AlertsPage(driver);
         alertsPage.openAlertsPage();
         Assert.assertEquals(alertsPage.acceptFirstAlert(), alertsPage.getFirstAlertText(), "Wrong first alert text");
     }
 
-    @Test
+    @Test(description = "Cancel 2nd alert")
+    @Description("Cancel 2nd alert")
     public void secondAlertCancelTest() {
         AlertsPage alertsPage = new AlertsPage(driver);
         alertsPage.openAlertsPage();
         Assert.assertEquals(alertsPage.cancelSecondAlert(), alertsPage.getSecondAlertText(), "Wrong second alert text");
     }
 
-    @Test
+    @Test(description = "Send text to 3rd alert")
+    @Description("Send text to 3rd alert")
     public void thirdAlertSendTextTest() {
         AlertsPage alertsPage = new AlertsPage(driver);
         alertsPage.openAlertsPage();
