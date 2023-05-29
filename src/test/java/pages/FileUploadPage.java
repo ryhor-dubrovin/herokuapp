@@ -34,7 +34,7 @@ public class FileUploadPage extends BasePage {
 
     public FileUploadPage uploadImage() {
         chooseFileButton.sendKeys(System.getProperty("user.dir")
-                .concat("/src/main/resources/files/Screenshot1.png"));
+                .concat("/src/test/resources/files/Screenshot1.png"));
         return this;
     }
 
