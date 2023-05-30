@@ -21,10 +21,5 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("-----      Test " + result.getName() + " Failed      -----");
-        Object currentClass = result.getInstance();
-        WebDriver driver = ((BaseTest) currentClass).getDriver();
-        AllureTool allureTool = new AllureTool();
-        allureTool.makeScreenshot(driver);
-        allureTool.getSystemName();
     }
 }
