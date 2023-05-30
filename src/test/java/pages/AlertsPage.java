@@ -15,9 +15,9 @@ public class AlertsPage extends BasePage {
     private WebElement thirdAlert;
     @FindBy(id = "result")
     private WebElement inputText;
-    private final String FIRST_ALERT_TEXT = "I am a JS Alert";
+    private final String FIRST_ALERT_TEXT = "I am a JS Alert!"; // !
     private final String SECOND_ALERT_TEXT = "I am a JS Confirm";
-    private final String THIRD_ALERT_TEXT = "I am a JS prompt";
+    private final String THIRD_ALERT_TEXT = "I am a JS prompt!"; // !
 
     public String getFirstAlertText() {
         return FIRST_ALERT_TEXT;

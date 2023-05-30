@@ -25,5 +25,6 @@ public class TestListener implements ITestListener {
         WebDriver driver = ((BaseTest) currentClass).getDriver();
         AllureTool allureTool = new AllureTool();
         allureTool.makeScreenshot(driver);
+        allureTool.getSystemName();
     }
 }
