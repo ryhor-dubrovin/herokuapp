@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -7,7 +8,8 @@ import pages.InputPage;
 
 public class InputTest extends BaseTest {
 
-    @Test(dataProvider = "testData")
+    @Test(dataProvider = "testData", description = "Change field value with arrows")
+    @Description("Change field value with arrows")
     public void changeValueWithArrowsTest(int arrowUp, int arrowDown, String result) {
         InputPage inputPage = new InputPage(driver);
         inputPage.openInputPage();

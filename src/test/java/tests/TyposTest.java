@@ -1,13 +1,15 @@
 package tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TyposPage;
 
 public class TyposTest extends BaseTest {
 
-    @Test
-    public void testSpellCheck() {
+    @Test(description = "Spell check")
+    @Description("Spell check")
+    public void spellCheckTest() {
         TyposPage typosPage = new TyposPage(driver);
         String text = typosPage
                 .openTyposPage()
