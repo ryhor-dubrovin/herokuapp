@@ -1,6 +1,8 @@
 package tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Issue;
+import io.qameta.allure.TmsLink;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AlertsPage;
@@ -8,6 +10,8 @@ import pages.AlertsPage;
 public class AlertsTest extends BaseTest {
     @Test(description = "Confirm 1st alert")
     @Description("Confirm 1st alert")
+    @Issue("ISS-112")
+    @TmsLink("TMS-123")
     public void firstAlertConfirmTest() {
         AlertsPage alertsPage = new AlertsPage(driver);
         alertsPage.openAlertsPage();

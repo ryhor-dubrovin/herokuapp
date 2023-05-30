@@ -23,10 +23,7 @@ public class TestListener implements ITestListener {
         System.out.println("-----      Test " + result.getName() + " Failed      -----");
         Object currentClass = result.getInstance();
         WebDriver driver = ((BaseTest) currentClass).getDriver();
-        try {
-            ScreenShooter.takeScreenShot(driver);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        AllureTool allureTool = new AllureTool();
+        allureTool.makeScreenshot(driver);
     }
 }
